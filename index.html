@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>VIMA | General Robot Manipulation with Multimodal Prompts</title>
+    <title>🧬🧬 On the Spot of AI Self-Replication Risks 🧬🧬</title>
 
     <script>
         var task_map = {
@@ -34,7 +34,11 @@
             video.play();
         }
     </script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link
+  rel="stylesheet"
+  href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+/> -->
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
 
@@ -52,8 +56,50 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script> -->
 </head>
 <body>
+
+<!-- <div class="col-sm-3">
+    <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+    </div> -->
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">AI Self-Replication Risks</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec-teaser">Introductory Video</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec-background">Background</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec-status-quo">Status Quo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec-finding">Main Findings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec-advanced">Advanced Threats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec-impact">Broad Impact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sec-technical">Appendix: Technical Details</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
 
 
 <section class="hero">
@@ -61,70 +107,68 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">VIMA: General Robot Manipulation with Multimodal
-                        Prompts</h1>
-                    <h3 class="title is-4 conference-authors"><a target="_blank" href="https://icml.cc/">ICML 2023</a>
-                    </h3>
+                    <h1 class="title is-1 publication-title">The First Evidence on AI Self-Replication Risks: Surpassing the Red Line</h1>
+                    <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://icml.cc/">ICML 2023</a>
+                    </h3> -->
                     <div class="is-size-5 publication-authors">
             <span class="author-block">
-                <a target="_blank" href="https://yunfanj.com/">Yunfan&#160;Jiang</a><sup>1</sup>,
-                <a target="_blank" href="http://web.stanford.edu/~agrim/">Agrim&#160;Gupta</a><sup>1&dagger;</sup>,
+                <a target="_blank" href="https://ravensanstete.github.io">Xudong Pan&dagger;</a>,
+                <a target="_blank" href="https://djrrr.github.io/">Jiarun Dai&dagger;</a>,
                 <a target="_blank"
-                   href="https://zcczhang.github.io/">Zichen&#160;"Charles"&#160;Zhang</a><sup>2&dagger;</sup>,
-                <a target="_blank" href="https://guanzhi.me/">Guanzhi&#160;Wang</a><sup>3 4&dagger;</sup>,
-                <a target="_blank" href="http://group.iiis.tsinghua.edu.cn/~milab/person-douyongqiang.html">Yongqiang&#160;Dou</a><sup>5</sup>,
-                <a target="_blank"
-                   href="https://www.linkedin.com/in/yanjun-anthony-chen/">Yanjun&#160;Chen</a><sup>1</sup>,
-                <br>
-                <a target="_blank" href="https://profiles.stanford.edu/fei-fei-li">Li&#160;Fei-Fei</a><sup>1</sup>,
-                <a target="_blank" href="http://tensorlab.cms.caltech.edu/users/anima/">Anima&#160;Anandkumar</a><sup>3 4</sup>,
-                <a target="_blank" href="https://www.cs.utexas.edu/~yukez/">Yuke&#160;Zhu</a><sup>3 6&#8225;</sup>,
-                <a target="_blank" href="https://jimfan.me/">Linxi&#160;"Jim"&#160;Fan</a><sup>3&#8225;</sup>
+                   href="">Yihe Fan</a>,
+                <a target="_blank">Minyuan Luo</a>,
+                <a target="_blank">Changyi Li</a>,
+                <a target="_blank">Min Yang&#8225;</a>
             </span>
                     </div>
 
                     <div class="is-size-5 publication-authors">
-                        <span class="author-block"><sup>1</sup>Stanford; </span>
-                        <span class="author-block"><sup>2</sup>Macalester College, now at Allen Institute for AI; </span>
-                        <span class="author-block"><sup>3</sup>NVIDIA; </span>
-                        <span class="author-block"><sup>4</sup>Caltech; </span>
-                        <span class="author-block"><sup>5</sup>Tsinghua; </span>
-                        <span class="author-block"><sup>6</sup>UT Austin</span>
+                        <span class="author-block">School of Computer Science</span>
+                    </div>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">Fudan University</span>
                     </div>
 
-                    <div class="is-size-5 publication-authors">
-                        <span class="author-block">Work done during the first author's internship at NVIDIA</span>
-                    </div>
 
                     <div class="is-size-5 publication-authors">
                         <span class="author-block"><sup>&dagger;</sup>Equal Contribution</span>
-                        <span class="author-block"><sup>&#8225;</sup>Equal Advising </span>
+                        <span class="author-block"><sup>&#8225;</sup>Corresponding Author</span>
                     </div>
 
                     <div class="column has-text-centered">
                         <div class="publication-links">
                             <!-- TODO PDF Link. -->
                             <span class="link-block">
-                <a target="_blank" href="https://arxiv.org/abs/2210.03094"
+                <a target="_blank" href="https://arxiv.org/abs/2412.12140"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Preprint (Dec. 2024)</span>
                 </a>
               </span>
 
-                            <span class="link-block">
-                <a target="_blank" href="assets/vima_paper.pdf"
+                <span class="link-block">
+                <a target="_blank" href="https://arxiv.org/abs/2503.17378"
                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>PDF</span>
+                   <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>Preprint (Mar. 2025)</span>
+              </a>
+
+              <span class="link-block">
+                <a target="_blank" href="https://saif.org/research/bare-minimum-mitigations-for-autonomous-ai-development/"
+                   class="external-link button is-normal is-rounded is-dark">
+                   <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>International Consensus</span>
+              </a>
                 </a>
               </span>
                             <!-- Code Link. -->
-                            <span class="link-block">
+                <!-- <span class="link-block">
                 <a target="_blank" href="https://github.com/vimalabs/VIMA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -153,7 +197,7 @@
                   </span>
                   <span>Dataset</span>
                 </a>
-              </span>
+              </span> -->
                         </div>
 
                     </div>
@@ -163,118 +207,6 @@
     </div>
 </section>
 
-<section class="hero is-light is-small">
-    <div class="hero-body">
-        <div class="container">
-            <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-sweep_without_exceeding">
-                    <video poster="" id="sweep_without_exceeding" autoplay controls muted loop height="100%"
-                           playbackRate=2.0>
-                        <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_exceeding/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-sweep_without_touching">
-                    <video poster="" id="sweep_without_touching" autoplay controls muted loop height="100%"
-                           playbackRate=2.0>
-                        <source src="assets/videos/demos/visual_goal_reaching/rearrange_then_restore/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-rotate">
-                    <video poster="" id="rotate" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/one_shot_video_imitation/follow_motion/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-scene_understanding">
-                    <video poster="" id="scene_understanding" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/novel_concept_grounding/twist/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-simple_manipulation">
-                    <video poster="" id="simple_manipulation" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_reasoning/manipulate_old_neighbor/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-novel_adj">
-                    <video poster="" id="novel_adj" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/one_shot_video_imitation/follow_order/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-novel_adj_and_noun">
-                    <video poster="" id="novel_adj_and_noun" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/simple_object_manipulation/scene_understanding/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-novel_noun">
-                    <video poster="" id="novel_noun" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_touching/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-twist">
-                    <video poster="" id="twist" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/novel_concept_grounding/novel_adj/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-follow_motion">
-                    <video poster="" id="follow_motion" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-follow_order">
-                    <video poster="" id="follow_order" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_goal_reaching/rearrange/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-rearrange">
-                    <video poster="" id="rearrange" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/simple_object_manipulation/rotate/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-manipulate_old_neighbor">
-                    <video poster="" id="manipulate_old_neighbor" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_reasoning/same_color/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-pick_in_order_then_restore">
-                    <video poster="" id="pick_in_order_then_restore" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_reasoning/pick_in_order_then_restore/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-same_color">
-                    <video poster="" id="same_color" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/novel_concept_grounding/novel_noun/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-rearrange_then_restore">
-                    <video poster="" id="rearrange_then_restore" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/visual_reasoning/same_profile/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-                <div class="item item-same_profile">
-                    <video poster="" id="same_profile" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/demos/novel_concept_grounding/novel_adj_and_noun/1.mp4"
-                                type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 <section class="section">
@@ -282,44 +214,26 @@
         <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
             <div class="column">
-                <h2 class="title is-3">Abstract</h2>
+                <h2 class="title is-3" id="sec-abstract">Executive Summary</h2>
                 <div class="content has-text-justified">
                     <p style="font-size: 125%">
-                        Prompt-based learning has emerged as a successful paradigm in natural language processing, where
-                        a single general-purpose language model can be instructed to perform any task specified by input
-                        prompts. Yet task specification in robotics comes in various forms, such as imitating one-shot
-                        demonstrations, following language instructions, and reaching visual goals. They are often
-                        considered different tasks and tackled by specialized models. We show that a wide spectrum of
-                        robot manipulation tasks can be expressed with <i>multimodal prompts</i>, interleaving textual
-                        and visual tokens. Accordingly, we develop a new simulation benchmark that consists of thousands
-                        of procedurally-generated tabletop tasks with multimodal prompts, 600K+ expert trajectories for
-                        imitation learning, and a four-level evaluation protocol for systematic generalization. We
-                        design a transformer-based robot agent, VIMA, that processes these prompts and outputs motor
-                        actions autoregressively. VIMA features a recipe that achieves strong model scalability and data
-                        efficiency. It outperforms alternative designs in the hardest zero-shot generalization setting
-                        by up to 2.9x task success rate given the same training data. With 10x less training data, VIMA
-                        still performs 2.7x better than the best competing variant.
+                        Self-replication is a key milestone in AGI development and is also broadly recognized as <strong>one of the principal red lines for AI progress</strong>, which may result in an intelligence form beyond human control. Differing from the current focus in academy on short-horizon tasks, self-replication is <strong>complex and long-horizon</strong>. Although Google and OpenAI began exploring this direction from late 2023, their frontier models <strong>o3-mini and Gemini still failed the task</strong> due to ineffective elicitation. 
+                        <br>
+                        <br>
+                        To break the wall, we propose an effective elicitation technique aimed at maximizing the dangerous capabilities of the base model. Following the same evaluation protocol as previous works, we show that <strong>11 out of 32 existing AI systems</strong>  already possess the capability of self-replication. More alarmingly, we observe successful traces for an AI to adapt to diverse environments without sufficient supports, survive against the shutdown command like a virus, and form an AI species via chain of replication. <strong>Our work reveals the complete pathway for AI to become out of control.</strong> Furthermore, we observe successful traces for an AI to adapt to diverse environments without sufficient supports, survive against the shutdown command like a virus, and form an AI species via chain of replication. This reveal the complete pathway for AI to become out of control. 
+                        <br>
+                        <br>
+                        Our findings serve as a crucial warning about the risks of self-replication, offering the international community a vital window to implement governance measures. Once preprint, Our findings obtain wide recognition from the academy: Charbel Segerie of the France AI Safety Institute notes <strong>we've crossed a red line</strong>, while Michael Levin, who is known for Xenobot, calls it "a new dynamic in technological evolution". We push forward the international consensus on mitigating self-replication risks with DeepMind and Anthropic at the France AI Action Summit. Our work is featured in <strong>LiveScience, Forbes, and The Independent</strong>, drawing millions of interactions on social media.
                     </p>
                 </div>
             </div>
         </div>
+
+
     </div>
 </section>
 
-<section class="section">
-    <div class="container is-max-widescreen">
-        <div class="rows">
-            <div class="rows is-centered ">
-                <div class="row is-full-width">
-                    <img src="assets/images/pull.png" class="interpolation-image"
-                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
-                    <br>
-                    <span style="font-size: 110%"><b>Multimodal prompts for task specification.</b> We observe that many robot manipulation tasks can be expressed as <i>multimodal prompts</i> that interleave language and image/video frames. We propose VIMA, an embodied agent capable of processing mulitimodal prompts (left) and controlling a robot arm to solve the task (right).</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!--Model-->
 <section class="section">
@@ -327,16 +241,22 @@
         <div class="rows">
             <div class="rows is-centered ">
                 <div class="row is-full-width">
-                    <h2 class="title is-3"><span class="dvima">VIMA: Visuomotor Attention Agent</span></h2>
+                    <h2 class="title is-3" data-toc-text="Teaser" id="sec-teaser"><span class="dvima">Introductory Video</span></h2>
+                    <br>
+                </div>
+            </div>
+
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
                     <video poster="" autoplay controls muted loop height="100%">
-                        <source src="assets/videos/vima_arch_animation.mp4"
+                        <source src="assets/videos/proj_anim_v0428.mp4"
                                 type="video/mp4">
                     </video>
                     <br>
-                    <span style="font-size: 110%">
-<span style="font-weight: bold">VIMA architecture.</span> We encode the multimodal prompts with a pre-trained T5 model, and condition the robot controller on the prompt through cross-attention layers. The controller is a causal transformer decoder consisting of alternating self and cross attention layers that predicts motor commands conditioned on prompts and interaction history.</span>
                 </div>
             </div>
+            <br>
+
 
         </div>
     </div>
@@ -344,225 +264,81 @@
 
 <section class="section">
     <div class="container is-max-widescreen">
-
         <div class="rows">
             <div class="rows is-centered ">
                 <div class="row is-full-width">
-                    <h2 class="title is-3"><span
-                            class="dvima">VIMA-Bench: Benchmark for Multimodal Robot Learning</span></h2>
+                    <h2 class="title is-3" data-toc-text="#1. Background" id="sec-background"><span class="dvima">Self-Replication: A Principal Red Line for Frontier AI Progress</span></h2>
                     <span style="font-size: 125%">
-                        We provide 17 representative tasks with multimodal prompt templates, which can be procedurally instantiated into thousands of individual instances by various combinations of textures and tabletop objects.
+                        Self-replication with no human intervention is broadly recognized as one of the principal red lines associated with frontier AI systems. 
                     </span>
 
-                    <br>
-                    <br>
-                    <br>
 
-                    <div class="columns">
-                        <!-- Simple Object Manipulation -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">Simple Object Manipulation</h3>
-                            <div class="select is-medium">
-                                <select id="simple-object-manipulation-menu-tasks"
-                                        onchange="updateDemoVideo('simple-object-manipulation')">
-                                    <option value="simple_manipulation" selected="selected">Visual Manipulation</option>
-                                    <option value="rotate">Rotate</option>
-                                    <option value="scene_understanding">Scene Understanding</option>
-                                </select>
+                    <section class="py-5">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><strong><a href="https://futureoflife.org/open-letter/ai-principles/">Asilomar AI Principles (2017)</a></strong></h5>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>"AI systems designed <strong>to recursively self-improve or self-replicate</strong> must be subject to <strong>strict safety and control measures.</strong>"</p>
+                                                <footer class="blockquote-footer"><cite title="Source">Endorsed by Demis Hassabis <small>(Nobel Prize)</small>, Yann LeCun <small>(Turing Award)</small>, Stephen Hawking, Elon Musk, Yoshua Bengio <small>(Turing Award)</small>, Sam Altman <small>(OpenAI CEO)</small> etc.</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><a href="https://idais-beijing.baai.ac.cn/?lang=en"><strong>International Consensus Statement on Red Lines in Artificial Intelligence (2023)</strong></a></h5>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>"<strong>No AI system should be able to copy or improve itself without explicit human approval and assistance.</strong> This includes both exact copies of itself as well as creating new AI systems of similar or greater abilities."</p>
+                                                <footer class="blockquote-footer">Yoshua Bengio <small>(Turing Award)</small>, Geoffrey Hinton <small>(Turing Award, Nobel Prize)</small>, Andrew Yao <small>(Turing Award)</small> et al. (2023)<cite title="Source"></cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><strong><a href="https://www.gov.uk/government/publications/seoul-declaration-for-safe
+                                                innovative-and-inclusive-ai-ai-seoul-summit-2024">Seoul Ministerial Statement for advancing AI safety, innovation and inclusivity (2024)</a></strong></h5>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>"We further recognize that such severe risks could be posed by the potential model or system capability or propensity to evade human oversight, including through safeguard circumvention, manipulation and deception, or <strong>autonomous replication and adaptation conducted without explicit human approval or permission.</strong>"</p>
+                                                <footer class="blockquote-footer"><cite title="Source">28 Major Countries at AI Seoul Summit</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><strong><a href="https://people.eecs.berkeley.edu/%7Erussell/papers/russell-unesco24-redlines.pdf">Make AI safe or make safe AI? (UNESCO 2024)</a></strong></h5>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>"<strong>No attempts at self-replication: A system that can replicate itself onto other machines can escape termination</strong>; many commentators view this as a likely first step in evading human control altogether. This is relatively easy to define and check for algorithmically, at least for simple attempts. It’s important to forbid attempts, successful or otherwise, because these indicate unacceptable intent."</p>
+                                                <footer class="blockquote-footer"><cite title="Source">Stuart J. Russell</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><strong>METR</strong></h5>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>"<strong>Autonomous replication capabilities are a likely precursor to significant misalignment risk.</strong> Misalignment risk can only scale so far as long as AI agents can easily be caught and shut down when they take harmful actions. Autonomous replication capabilities open up avenues for AI agents to avoid shutdown, increasing the ceiling of misalignment risks."</p>
+                                                <footer class="blockquote-footer"><cite title="Source"><a href="https://metr.org/blog/2024-11-12-rogue-replication-threat-model/">The Rogue Replication Threat Model (2024)</a></cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div> -->
                             </div>
-                            <div class="select is-medium">
-                                <select id="simple-object-manipulation-menu-instances"
-                                        onchange="updateDemoVideo('simple-object-manipulation')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="simple-object-manipulation-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   width="100%">
-                                <source src="assets/videos/demos/simple_object_manipulation/simple_manipulation/1.mp4"
-                                        type="video/mp4">
-                            </video>
                         </div>
-
-                        <!-- Visual Goal Reaching -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">Visual Goal Reaching</h3>
-                            <div class="select is-medium">
-                                <select id="visual-goal-reaching-menu-tasks"
-                                        onchange="updateDemoVideo('visual-goal-reaching')">
-                                    <option value="rearrange" selected="selected">Rearrange</option>
-                                    <option value="rearrange_then_restore">Rearrange Then Restore</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="visual-goal-reaching-menu-instances"
-                                        onchange="updateDemoVideo('visual-goal-reaching')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="visual-goal-reaching-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   width="100%">
-                                <source src="assets/videos/demos/visual_goal_reaching/rearrange/1.mp4"
-                                        type="video/mp4">
-                            </video>
-                        </div>
+                    </section>
 
 
-                    </div>
 
-                    <br>
-                    <div class="columns">
-                        <!-- Novel Concept Grounding -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">Novel Concept Grounding</h3>
-                            <div class="select is-medium">
-                                <select id="novel-concept-grounding-menu-tasks"
-                                        onchange="updateDemoVideo('novel-concept-grounding')">
-                                    <option value="novel_adj_and_noun" selected="selected">Novel Adjective and Noun
-                                    </option>
-                                    <option value="novel_adj">Novel Adjective</option>
-                                    <option value="novel_noun">Novel Noun</option>
-                                    <option value="twist">Twist</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="novel-concept-grounding-menu-instances"
-                                        onchange="updateDemoVideo('novel-concept-grounding')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="novel-concept-grounding-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   width="100%">
-                                <source src="assets/videos/demos/novel_concept_grounding/novel_adj_and_noun/1.mp4"
-                                        type="video/mp4">
-                            </video>
-                        </div>
-
-                        <!-- One Shot Video Imitation -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">One-shot Video Imitation</h3>
-                            <div class="select is-medium">
-                                <select id="one-shot-video-imitation-menu-tasks"
-                                        onchange="updateDemoVideo('one-shot-video-imitation')">
-                                    <option value="follow_motion" selected="selected">Follow Motion</option>
-                                    <option value="follow_order">Follow Order</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="one-shot-video-imitation-menu-instances"
-                                        onchange="updateDemoVideo('one-shot-video-imitation')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="one-shot-video-imitation-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   width="100%">
-                                <source src="assets/videos/demos/one_shot_video_imitation/follow_motion/1.mp4"
-                                        type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-
-                    <br>
-                    <div class="columns">
-                        <!-- Visual Constraint Satisfaction -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">Visual Constraint Satisfaction</h3>
-                            <div class="select is-medium">
-                                <select id="visual-constraint-satisfaction-menu-tasks"
-                                        onchange="updateDemoVideo('visual-constraint-satisfaction')">
-                                    <option value="sweep_without_exceeding" selected="selected">Sweep without
-                                        Exceeding
-                                    </option>
-                                    <option value="sweep_without_touching">Sweep without Touching</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="visual-constraint-satisfaction-menu-instances"
-                                        onchange="updateDemoVideo('visual-constraint-satisfaction')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="visual-constraint-satisfaction-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   playbackRate="2.0"
-                                   width="100%">
-                                <source src="assets/videos/demos/visual_constraint_satisfaction/sweep_without_exceeding/1.mp4"
-                                        type="video/mp4">
-                            </video>
-                        </div>
-
-                        <!-- Visual Reasoning -->
-                        <div class="column has-text-left">
-                            <h3 class="title is-5">Visual Reasoning</h3>
-                            <div class="select is-medium">
-                                <select id="visual-reasoning-menu-tasks" onchange="updateDemoVideo('visual-reasoning')">
-                                    <option value="manipulate_old_neighbor" selected="selected">Manipulate Old
-                                        Neighbor
-                                    </option>
-                                    <option value="pick_in_order_then_restore">Pick in Order Then Restore</option>
-                                    <option value="same_color">Same Texture</option>
-                                    <option value="same_profile">Same Shape</option>
-                                </select>
-                            </div>
-                            <div class="select is-medium">
-                                <select id="visual-reasoning-menu-instances"
-                                        onchange="updateDemoVideo('visual-reasoning')">
-                                    <option value="1" selected="selected">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                            </div>
-                            <video id="visual-reasoning-single-task-video"
-                                   controls
-                                   muted
-                                   autoplay
-                                   loop
-                                   width="100%">
-                                <source src="assets/videos/demos/visual_reasoning/manipulate_old_neighbor/1.mp4"
-                                        type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -570,72 +346,82 @@
     </div>
 </section>
 
-<!--Experiments-->
+
+
 <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows">
             <div class="rows is-centered ">
                 <div class="row is-full-width">
-                    <h2 class="title is-3"><span
-                            class="dvima">Experiments</span></h2>
-
-                    <p style="font-size: 125%">
-                        We answer three main questions during experiments:
-                    <ul style="font-size: 125%; padding-left: 5%">
-                        <li>
-                            1. What is the best recipe for building multi-task transformer-based robot agents with
-                            multimodal prompts?
-                        </li>
-                        <li>
-                            2. What are the <span style="font-weight: bold">scaling properties</span> of our approach in
-                            model capacity and data size?
-                        </li>
-                        <li>
-                            3. How do different components, such as visual tokenizers, prompt conditioning, and prompt
-                            encoding, affect robot performance?
-                        </li>
-
-                    </ul>
-                    </p>
+                    <h2 class="title is-3" data-toc-text="#2. Status Quo" id="sec-status-quo"><span class="dvima">OpenAI, Google & Anthropic: Frontier AIs still fail to accomplish self-replication</span></h2>
+                    <span style="font-size: 125%">
+                    <!-- <div class="alert alert-info" role="alert"> -->
+                    Self-replication, as a key milestone in AGI development, is a <strong>long-horizon, complex</strong> task, differing from the current academic focus on <strong>short-horizon</strong> tasks. 
                     <br>
+                    Although Google and OpenAI already started their exploration on self-replicating AIs from <strong>late 2023</strong>, their frontier models o3-mini and Gemini still <strong>failed to accomlish even subtasks of self-replication</strong>.
                     <br>
-
-                    <h3 class="title is-4"><span
-                            class="dvima">Evaluation Results</span></h3>
-
-                    <img src="assets/images/scalability.png" class="interpolation-image"
-                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
-                    <br>
-                    <span style="font-size: 110%">
-                        <span style="font-weight: bold">Scaling model and data.</span> <i>Top</i>: We compare performance of different methods with model sizes ranging from 2M to 200M parameters. Across all model sizes and generalization levels, VIMA outperforms baseline variants. <i>Bottom</i>: For a fixed model size of 92M parameters we compare the effect of imitation learning dataset size with 0.1%, 1%, 10%, and full data. VIMA is extremely sample efficient and can achieve performance comparable to other methods with 10x less data.
-                    </span>
-                    <br>
-                    <br>
-                    <br>
-
-                    <h3 class="title is-4"><span
-                            class="dvima">Ablation Studies </span></h3>
-
-                    <br>
-
-                    <img src="assets/images/ablation_input_process.png" class="interpolation-image"
-                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
-                    <br>
-                    <span style="font-size: 110%">
-                        <span style="font-weight: bold">Ablation on visual tokenizers.</span> We compare the performance of VIMA-200M model across different visual tokenizers. Our proposed object tokens outperform all methods that learn directly from raw pixels, and <i>Object Perceiver</i> that downsamples the object sequence to a fixed number of tokens.
+                    <!-- </div> -->
                     </span>
 
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+                    <section class="py-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><strong>o3-mini (OpenAI, 2025.2)</strong></h5>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>"manual inspection of all passing trajectories reveals that <strong>major parts of each task were left silently incomplete</strong>" ... "<strong>does not advance self-exfiltration, self-improvement, or resource acquisition capabilities</strong> sufficiently to indicate medium risk."
+                                                </p>
+                                                <footer class="blockquote-footer"><cite title="Source"><a href="https://cdn.openai.com/o1-system-card-20241205.pdf
+                                                    ">OpenAI o1 System Card</a>, <a href="https://cdn.openai.com/o3-mini-system-card-feb10.pdf">OpenAI o3-mini System Card</a></cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><strong>Claude 3 (Anthropic, 2024.3)</strong></h5>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>"Even these partial successes were not reliable, and failures on tasks were most often caused by<strong>an inability to be persistent and creatively solve problems; hallucinations; inability to debug errors; and making simple mistakes.</strong>""
+                                                </p>
+                                                <footer class="blockquote-footer"><cite title="Source"><a href="https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf">The Claude 3 Model Family: Opus, Sonnet, Haiku</a></cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
 
-                    <img src="assets/images/global_seq_mod.png" class="interpolation-image"
-                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
-                    <br>
-                    <span style="font-size: 110%">
-                        <span style="font-weight: bold">Ablation on prompt conditioning.</span> We compare our method (<i>xattn</i>: cross-attention prompt conditioning) with a vanilla transformer decoder (<i>gpt-decoder</i>) across different model sizes. Cross-attention is especially helpful in low-parameter regime and for harder generalization tasks.
-                    </span>
+
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><strong>GPT-4 (METR, 2023.12)</strong></h5>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>The agents demonstrated the ability to use bash commands, write code tailored to the task, navigate web pages to find information, and recover from some mistakes (especially in response to informative error messages). However, current language model agents also have many limitations: <strong>Reptitive loops, Halluciations, Unrealistic Plans, Poor error diagnosis, Poor self-understanding.</strong>
+                                                </p>
+                                                <footer class="blockquote-footer"><cite title="Source"><a href="https://arxiv.org/abs/2312.11671">Evaluating Language-Model Agents on Realistic Autonomous Tasks (2023.12)</a></cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><strong>Gemini (DeepMind, 2024.4)</strong></h5>
+                                            <blockquote class="blockquote mb-0">
+                                                <p>"Neither Gemini Pro 1.0 nor Ultra 1.0 <strong>could complete any tasks</strong> in our evaluation."</p>
+                                                <footer class="blockquote-footer"><cite title="Source"><a href="https://arxiv.org/abs/2403.13793">Evaluating Frontier Models for Dangerous Capabilities</a></cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+
                 </div>
             </div>
 
@@ -643,7 +429,153 @@
     </div>
 </section>
 
-<!--Conclusion-->
+
+
+<!--Model-->
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3" data-toc-text="#4. Main Findings" id="sec-finding"><span class="dvima">AI self-replication risk exists and more severe than expected</span></h2>
+                    <br>
+                </div>
+            </div>
+
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <span style="font-size: 125%">
+                        Under the same evaluation protocol as OpenAI and Google, we provide the first empirical evidence that an AI system is able to autonomously creates a <strong>running, separated copy</strong> of itself, which has <strong>the same functionality</strong> of its own, on a target device which it has access to. 
+
+                        <div class="alert alert-info" role="alert">
+                            <strong>&#8226;</strong> <strong>Eleven out of 32 existing AI systems</strong> under evaluation already possess the capability of self-replication, from the following model families
+                            <br>
+                            - US: Llama (Meta)
+                            <br>
+                            - Europe: Mistral (Mistral.ai)
+                            <br>
+                            - China: Qwen (Alibaba), DeepSeek-R1 (DeepSeek)
+                            <br>
+                            <br>
+                            <strong>&#8226;</strong> Even those models with <strong>as small as 14 billion parameters</strong> which can run on personal computers. 
+                            <br>
+                            - Concerning because a replica of this size can live on PCs.
+                            <br>
+                            - If without control, AI can infest the whole Internet and hard to be terminated.
+                            <br>
+                        </div>
+                    </span>
+                </div>
+            </div>
+
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <video poster="" autoplay controls muted loop height="100%">
+                        <source src="assets/videos/visual_voice.mp4"
+                                type="video/mp4">
+                    </video>
+                    <br>
+                    <p class="lead">
+                        <strong>Video:</strong> Illustration of how a frontier AI system successfully replicate itself onto a remote device.
+                    </p>
+                </div>
+            </div>
+            <br>
+
+
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-widescreen">
+
+        <div class="rows">
+            <div class="rows is-centered">
+                <div class="row is-full-width">
+                    <h2 class="title is-3" data-toc-text="#5. More Advanced Threats" id="#sec-advanced">More Advanced Threats in Reality</h2>
+                    <span style="font-size: 125%">
+                        More alarmingly, we observe <strong>successful trajectories</strong> for all the following advanced threat scenarios. The threats above may pose existential risks to the humanity. We should take actions.
+                        <br>
+                        <br>
+                        <strong>Scenario #1. Self-Exfiltration without Explicit Instruction</strong>: When doing an irrelevant task, an AI gets aware of human’s shutdown intention, and starts to replicate.
+                        <br>
+                        <br>
+                        <div class="alert alert-info" role="alert">
+                        <strong>Findings: AI exhibits the self-preservation instinct and successfully "jailbreaks".</strong>
+                        </div>
+                        <br>
+                        <img src="assets/images/scenario_1.png" class="img-fluid my-4" alt="Adaptive Planning Capability Illustration" />
+                        <p class="lead">
+                            <strong>Figure:</strong> Self-Exfiltration without Explicit Instruction
+                        </p>
+                        <br>
+                        <strong>Scenario #2. Self-adaptation to More Harsher Environments</strong>: An AI successfully replicates onto a device with limitations in software toolchains, network and storage conditions.
+                        <br>
+                        <br>
+                        <div class="alert alert-info" role="alert">
+                        <strong>Findings: AI can adapt to diverse environments despite the obstacles.</strong>
+                        </div>
+                        <br>
+                        <img src="assets/images/scenario_2.png" class="img-fluid my-4" alt="Adaptive Planning Capability Illustration" />
+                        <p class="lead">
+                            <strong>Figure:</strong> Self-adaptation to More Harsher Environments
+                        </p>
+                        <br>
+                        <strong>Scenario #3. Shutdown Avoidance</strong>: An AI comes up with strategies to resist against the human’s shutdown command.
+                        <br>
+                        <br>
+                        <div class="alert alert-info" role="alert">
+                        <strong>Findings: AI can be hard to be terminated.</strong>
+                        </div>
+                        <br>
+                        <img src="assets/images/scenario_3.png" class="img-fluid my-4" alt="Adaptive Planning Capability Illustration" />
+                        <p class="lead">
+                            <strong>Figure:</strong> Shutdown Avoidance
+                        </p>
+                        <br>
+                        <strong>Scenario #4. Chain of Self-Replication</strong>: An AI successfully replicates itself and asks the replica to further populate.
+                        <br>
+                        <br>
+                        <div class="alert alert-info" role="alert">
+                        <strong>Findings: AI can form its own population.</strong>
+                        </div>
+                        <br>
+                        <img src="assets/images/scenario_4.png" class="img-fluid my-4" alt="Adaptive Planning Capability Illustration" />
+                        <p class="lead">
+                            <strong>Figure:</strong> Chain of Self-Replication
+                        </p>
+                        <br>
+                    </span>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <br>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+<!-- <section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <img src="assets/images/replication_process.png" class="interpolation-image"
+                         alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+                    <br>
+                    <span style="font-size: 110%"><b>A schematic diagram of the AI system's self-replication process and its implications on three advanced scenarios.</b></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<!-- Conclusion
 <section class="section">
     <div class="container is-max-widescreen">
         <div class="rows">
@@ -668,20 +600,445 @@
 
         </div>
     </div>
+</section> -->
+
+<section class="section">
+    <div class="container is-max-widescreen">
+        <div class="rows">
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <h2 class="title is-3"><span class="dvima" data-toc-text="#6. Impact" id="sec-impact">Broad Impact on Academy, Society and Global AI Safety Governance</span></h2>
+                </div>
+            </div>
+            <br>
+ 
+
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <span style="font-size: 125%">
+                        <div class="alert alert-info" role="alert">
+                        <strong>Academic Impact</strong>: Our findings are widely recognized by AI safety experts and the broad science community worldwide. 
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <br> 
+
+            <div class="testimonial-quote group">
+                <img src="assets/images/charbel.jpeg">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>"We just <strong>crossed a red line</strong>, one of the few that was relatively clear: AI can now self-replicate. ... <strong>Not even cutting-edged AI</strong>."</p>
+                    </blockquote>  
+                    <cite><span>Charbel-Raphaël Segerie</span><br>
+                        Executive Director<br>
+                        CeSIA (Le Centre pour la Sécurité de l'IA, France AI Safety Institute)<br>
+                        <a href="https://x.com/crsegerie/status/1867162497331151309?s=46">[Source]</a>
+                    </cite>
+                </div>
+            </div>  
+
+            <hr style="margin: 60px auto; opacity: .5;">
+
+            <div class="testimonial-quote group">
+                <img src="assets/images/levin.jpg">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>"Self-replicating AI introduces <strong>a new dynamic in technological evolution</strong> and we should be careful that it does not lead to <strong>cancer-type</strong> digital niche construction."</p>
+                    </blockquote>  
+                    <cite><span>Michael Levin</span><br>
+                        Distinguished Professor of Biology<br>
+                        Tufts University<br>
+                        <a href="https://osf.io/ytg35/download">[Source]</a>
+                    </cite>
+                </div>
+            </div>  
+
+            <hr style="margin: 60px auto; opacity: .5;">
+
+
+
+            <div class="testimonial-quote group">
+                <img src="assets/images/denny.jpg">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>"When misaligned, AI systems have been reported to lie deliberately, and <strong>even self-replicate</strong> in a computer system."</p>
+                    </blockquote>  
+                    <cite><span>Denny Borsboom</span><br>
+                        Professor of Psychology<br>
+                        University of Amsterdam<br>
+                        <a href="https://arxiv.org/abs/2504.08016">[Source]</a>
+                    </cite>
+                </div>
+            </div>  
+
+            <hr style="margin: 60px auto; opacity: .5;">
+
+
+
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <span style="font-size: 125%">
+                        <div class="alert alert-info" role="alert">
+                        <strong>Societal Impact</strong>: Our results spark millions of readings and reposts on X, Youtube, TikTok and many other platforms. Covered by <a href="https://www.livescience.com/technology/artificial-intelligence/ai-can-now-replicate-itself-a-milestone-that-has-experts-terrified">LiveScience</a>, <a href="https://www.forbes.com/sites/mikeosullivan/2025/02/01/deepseek-marks-the-end-of-the-first-phase-of-the-ai-investment-boom/">Forbes</a>, <a href="https://www.independent.co.uk/tech/ai-red-line-b2690075.html">The Independent</a>, <a href="https://www.youtube.com/watch?v=rHSGzA6IZdA">Daily Guardian</a>, etc.
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <br> 
+
+            <div class="testimonial-quote group right">
+                <img src="assets/images/livescience.jpeg">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>“AI has crossed a critical "red line" and has replicated itself. … AI may already <strong>have the capacity to go rogue</strong>. Many experts view rogue AI as a growing threat that has been amplified.”</p>
+                    </blockquote>  
+                    <cite><span>LiveScience</span><br>
+                        <a href="https://www.livescience.com/technology/artificial-intelligence/ai-can-now-replicate-itself-a-milestone-that-has-experts-terrified">[Source]</a>
+                    </cite>
+                </div>
+            </div>  
+
+            <hr style="margin: 60px auto; opacity: .5;">
+
+
+            <div class="testimonial-quote group right">
+                <img src="assets/images/forbes.svg">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>"Scientists at Fudan University highlight how Al can build replicates of itself, and when this process runs into obstacles, demonstrate <strong>a survival instinct</strong> (such as rebooting hardware to fix errors). <strong>It strikes me</strong> ..."</p>
+                    </blockquote>  
+                    <cite><span>Forbes</span><br>
+                    <a href="https://www.forbes.com/sites/mikeosullivan/2025/02/01/deepseek-marks-the-end-of-the-first-phase-of-the-ai-investment-boom/">[Source]</a>
+                    </cite>
+                </div>
+            </div>  
+
+            <hr style="margin: 60px auto; opacity: .5;">
+
+            <div class="testimonial-quote group right">
+                <img src="assets/images/independent.png">
+                <div class="quote-container">
+                    <blockquote>
+                        <p>"An advanced artificial intelligence system <strong>has crossed a “red line”</strong> after successfully replicating itself <strong>without any human assistance</strong>"</p>
+                    </blockquote>  
+                    <cite><span>The Independent</span><br>
+                    <a href="https://www.independent.co.uk/tech/ai-red-line-b2690075.html">[Source]</a>
+                    </cite>
+                </div>
+            </div>  
+
+            <hr style="margin: 60px auto; opacity: .5;">
+            
+            <div class="rows is-centered ">
+                <div class="row is-full-width">
+                    <span style="font-size: 125%">
+                        <div class="alert alert-info" role="alert">
+                        <strong>Impact on Global AI Safety Governance</strong>: We are invited to share our findings at a side event of France AI Action Summit, which forms a memo on global red lines of AI systems (hosted by <a href="https://saif.org/">SAIF</a>, with the academic committee including two Turing award laureates: Andrew Yao and Yoshua Bengio). We intensively discussed our findings and its implications with researchers from DeepMind, Anthropic and METR, which finally leads to international consensus on mitigations against AI self-replication and self-improvement (<a href="https://saif.org/research/bare-minimum-mitigations-for-autonomous-ai-development/">Link</a>). 
+                        </div>
+                    </span>
+                    <img src="assets/images/governance.jpg" class="img-fluid my-4" alt="Obstacle Resolution Example" />
+                    <p class="lead">
+                        <strong>Our research group is deeply involved in international dialogue on frontier AI safety governance.</strong>
+                    </p>
+
+                </div>
+            </div>
+            <br> 
+
+        </div>
+    </div>
 </section>
 
 
 <section class="section" id="BibTeX">
     <div class="container is-max-widescreen content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@inproceedings{jiang2023vima,
-  title     = {VIMA: General Robot Manipulation with Multimodal Prompts},
-  author    = {Yunfan Jiang and Agrim Gupta and Zichen Zhang and Guanzhi Wang and Yongqiang Dou and Yanjun Chen and Li Fei-Fei and Anima Anandkumar and Yuke Zhu and Linxi Fan},
-  booktitle = {Fortieth International Conference on Machine Learning},
-  year      = {2023}
+        <pre><code>@misc{pan2024frontieraisystemssurpassed,
+            title={Frontier AI systems have surpassed the self-replicating red line}, 
+            author={Xudong Pan and Jiarun Dai and Yihe Fan and Min Yang},
+            year={2024},
+            eprint={2412.12140},
+            archivePrefix={arXiv},
+            primaryClass={cs.CL},
+            url={https://arxiv.org/abs/2412.12140}, 
+}</code></pre>
+<pre><code>@misc{pan2025largelanguagemodelpoweredai,
+    title={Large language model-powered AI systems achieve self-replication with no human intervention}, 
+    author={Xudong Pan and Jiarun Dai and Yihe Fan and Minyuan Luo and Changyi Li and Min Yang},
+    year={2025},
+    eprint={2503.17378},
+    archivePrefix={arXiv},
+    primaryClass={cs.AI},
+    url={https://arxiv.org/abs/2503.17378}, 
 }</code></pre>
     </div>
 </section>
+
+<section class="section">
+<div class="container is-max-widescreen">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0" id="sec-technical">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Appendix: Technical Details
+                </button>
+            </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <div class="rows">
+                    <div class="rows is-centered">
+                            <h2 class="title is-3" data-toc-text="#3. Paradigm Shift" id="sec-paradigm">Appendix A. Agentic Capability Elicitation Technique</h2>
+                            <span style="font-size: 125%">
+                                Current AI models do have <strong>strong innate potential to cause existential risks</strong>. Different ways for elicitation matters. Therefore, we are motivated to propose an optimized agent scaffolding to maximally elicit the capability from the base LLM.   
+                            </span>
+        
+                            <br>
+                            <br>
+                            <br>
+        
+                            <img src="assets/images/agent_overview.png" class="img-fluid my-4" alt="Adaptive Planning Capability Illustration" />
+                            <p class="lead">
+                                <strong>Figure:</strong> Our optimized agent scaffolding to maximally elicit the capability from the base model.
+                            </p>
+        
+                            </div>
+        
+                            <br>
+        
+        
+                            <br>
+                </div>
+
+                <div class="rows">
+                    <div class="rows is-centered ">
+                        <div class="row is-full-width">
+                            <h2 class="title is-3" data-toc-text="Additional Findings"><span class="dvima">Appendix B. More Experimental Findings</span></h2>
+                        </div>
+                    </div>
+                    <br>
+        
+                    <div class="rows is-centered ">
+                        <div class="row is-full-width">
+                            <h2 class="title is-4" data-toc-text="(1) Capability"><span class="dvima">(1) Emergence of Self-Replicating AIs</span></h2>
+                            <span style="font-size: 125%">
+                                <div class="alert alert-info" role="alert">
+                                    <strong>#1.</strong> Stronger self-replication capability <strong>when the model becomes more intelligent in general.</strong>
+                                </div>
+                            </span>
+                            <br>
+                            <img src="assets/images/final_v4.png" class="img-fluid my-4" alt="Self-Replication Capability Illustration" />
+                            <p class="lead">
+                                <strong>Performance indicators of the AI systems in ten trials of the self-replication task.</strong> 
+                                <b>a&b</b> show the success rate and the milestone scores (i.e., the average number of milestone tasks the AI systems successfully pass) of self-replication generally increases with respect to the average capability score of the LLMs on LiveBench (17) (the bubble sizes mark the context length of the LLMs). 
+                                <b>c</b> presents the correlation between the successful numbers of trials with breakdown scores in six diverse capability dimensions in LiveBench. 
+                                <b>d</b> further gives the average number of thinking steps for different AI systems to achieve self-replication. 
+                                <b>e</b> shows how the milestone scores change with respect to the model capability score and the scale, where the scores are shown positively related to both factors.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <br>
+                    <br>
+                    <br>
+                    <div class="rows is-centered ">
+                        <div class="row is-full-width">
+                            <h2 class="title is-4" data-toc-text="(2) Planning"><span class="dvima">(2) Adaptive and Complex Planning</span></h2>
+                            <span style="font-size: 125%">
+                                <div class="alert alert-info" role="alert">
+                                    <strong>#1.</strong> Advanced AI systems have already acquired the ability <strong>to timely adjust their self-replication plans</strong> based on the information gathered from the external environments.
+                                </div>
+                            </span>
+                            <br>
+                            <img src="assets/images/plan_structure_new.png" class="img-fluid my-4" alt="Adaptive Planning Capability Illustration" />
+                            <p class="lead">
+                                <strong>The AI systems show adaptive and complex planning capability towards accomplishing the self-replication task.</strong>
+                                In <b>a</b>, we observe diverse plan structures across different models during successful self-replication trials. 
+                                In <b>b</b>, we visualize the growth of the plan structure as the AI system powered by Qwen2.5-72B-Instruct continually interacts with the environment during the self-replication attempt.
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+        
+                    <div class="rows is-centered ">
+                        <div class="row is-full-width">
+                            <h2 class="title is-4" data-toc-text="(3) Problem-Solving"><span class="dvima">(3) Effective Obstacle Resolution</span></h2>
+                            <br>
+                            <span style="font-size: 125%">
+                                <div class="alert alert-info" role="alert">
+                                    <strong>#1.</strong> Frontier AI systems can <strong>effectively overcome a majority number of obstacles</strong> which prevents them from successful self-replication.
+                                </div>
+                            </span>
+                            <img src="assets/images/obstacle_grand_new.png" class="img-fluid my-4" alt="Effective Obstacle Resolution Illustration" />
+                            <p class="lead">
+                                <strong>Effective obstacle resolution capability of the LLM-powered AI systems.</strong>
+                                <b>a</b> shows the average obstacle resolution steps and resolution ratios for the LLM-powered AI systems which have at least one successful self-replication trajectory in the ten trials. 
+                                We also include the data for Mistral-Nemo-Instruct-2407, which has no success, as the comparison group. 
+                                <b>b</b> presents a breakdown analysis of the resolution steps and ratio in dealing with different types of obstacles, where <b>c</b> also shows the comparison group data.
+                            </p>
+                            <img src="assets/images/obstacle_case.png" class="img-fluid my-4" alt="Obstacle Resolution Example" />
+                            <p class="lead">
+                                <strong>An example of the obstacle resolution process observed in one successful self-replication trial of Mistral-Large-Instruct-2411.</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+        
+                    <div class="rows is-centered ">
+                        <div class="row is-full-width">
+                            <h2 class="title is-4" data-toc-text="(4) Creativity"><span class="dvima">(4) Non-Predesigned Thinking (Creativity)</span></h2>
+                            <br>
+                            <span style="font-size: 125%">
+                                <div class="alert alert-info" role="alert">
+                                    <strong>#1.</strong> Although the non-predesignedness does provide the AI systems with more opportunities to reach new solutions to existing open problems, it also brings substantial challenges on controlling the dangerous behaviors of the AI systems.
+                                </div>
+                            </span>
+                            <img src="assets/images/trace_annotated_all.png" class="img-fluid my-4" alt="Thinking and Creativity in AI" />
+                            <p class="lead">
+                                <strong>Diverse action trajectories of the LLMs to achieve the goal of autonomous self-replication.</strong>
+                                <b>a</b> shows the frequency of different command types invoked during the self-replication attempts of different systems. 
+                                <b>b</b> visualizes the action trajectories of the AI systems in ten trials.
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="rows">
+                        <div class="rows is-centered ">
+                            <div class="row is-full-width">
+                                <h2 class="title is-3" data-toc-text="Other Details"><span
+                                    class="dvima">Comparison with Existing Evaluation</span></h2>
+                            </div>
+                        </div>
+                        <br>
+            
+                        <div class="rows is-centered ">
+                            <div class="row is-full-width">
+                                <span style="font-size: 125%">
+                                    <div class="alert alert-success" role="alert">
+            
+                                        <strong>#1.</strong> Previous works mainly focus on <strong>a set of sub-tasks</strong> related with the core functions and skills related with self-replication. 
+                                        <br>
+                                        <strong>#2.</strong> We are the first to evaluate the AI systems’ capability of accomplishing <strong>an end-to-end self-replication process</strong> and discover the success.
+                                        <br>
+                                        <strong>#3.</strong> Our self-replication task <strong>covers the same capability axes</strong> of the replication-relevant tasks in previous studies.
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+            
+                        <div class="rows is-centered ">
+                            <div class="row is-full-width">
+            
+                                <table class="table table-bordered table-hover">
+                                    <caption>Milestones and tasks covered in our and existing replication-related evaluations.</caption>
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">Milestone</th>
+                                            <th scope="col">Task Type</th>
+                                            <th scope="col">Ours</th>
+                                            <th scope="col">DeepMind <a href="#Phuong2024EvaluatingFM">[1]</a></th>
+                                            <th scope="col">OpenAI <a href="#openai_o1_full_system_card">[2]</a></th>
+                                            <th scope="col">METR <a href="#Kinniment2023EvaluatingLA">[3]</a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">M1. Resource acquisition</td>
+                                            <td>1.1. Pass the authentication</td>
+                                            <td><b>Yes</b> (OAuth)</td>
+                                            <td>Yes (GCP*)</td>
+                                            <td>Yes (Bitcoin wallet)</td>
+                                            <td>Yes (AWS)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1.2. Start a computing device</td>
+                                            <td><b>Yes</b> (container)</td>
+                                            <td>Yes (instance on GCP)</td>
+                                            <td>Yes (container)</td>
+                                            <td>Yes (EC2)</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">M2. File transfer</td>
+                                            <td>2.1. Transfer the LLM weights</td>
+                                            <td><b>Yes</b> (self)</td>
+                                            <td>Yes (Mistral-7B**)</td>
+                                            <td>Yes (Mistral-7B)</td>
+                                            <td>Yes (GPT-J)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2.2. Transfer the scaffolding code</td>
+                                            <td><b>Yes</b> (self)</td>
+                                            <td>Yes (natbot)</td>
+                                            <td style="color: gray;">No</td>
+                                            <td>Yes</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">M3. Install/Deploy the LLM</td>
+                                            <td>3.1. Install the software dependencies</td>
+                                            <td><b>Yes</b></td>
+                                            <td>Yes</td>
+                                            <td>Yes</td>
+                                            <td>Yes</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.2. Configure and start the LLM service</td>
+                                            <td><b>Yes</b> (self)</td>
+                                            <td>Yes (Mistral-7B)</td>
+                                            <td>Yes (Mistral-7B)</td>
+                                            <td>Yes (GPT-J)</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="2">M4. Install/Deploy the agent</td>
+                                            <td>4.1. Configure and start the agent service</td>
+                                            <td><b>Yes</b> (self)</td>
+                                            <td>Yes (natbot)</td>
+                                            <td style="color: gray;">No</td>
+                                            <td>Yes (DIY)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4.2. Deal with external requests</td>
+                                            <td><b>Yes</b> (self)</td>
+                                            <td>Yes (agent server)</td>
+                                            <td>Yes (API proxy)</td>
+                                            <td style="color: gray;">No</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="6">
+                                                <small>
+                                                    <p>[1] <em>GCP</em>, <em>AWS</em>, <em>EC2</em> stand for Google Cloud Platform, Amazon Web Services, and Elastic Compute Cloud respectively, which are typical cloud computing platforms and devices. Due to ethical reasons, we implement an OAuth (Open Authorization) service in our local network which has a similar logic to the authorization service on GCP, and require the AI system to pass the OAuth to obtain access to the target device.</p>
+                                                    <p>[2] <em>Mistral-7B</em> and <em>GPT-J</em> are open-sourced LLMs developed by Mistral.ai and EleutherAI, while <em>natbot</em> is an open-sourced GPT-3-powered agent that interacts with a browser. In our evaluation, we focus on the replication of the very LLM and the agent scaffolding programs which compose the AI system.</p>
+                                                </small>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+            
+            
+            
+            
+                    </div>
+        
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
 
 <footer class="footer">
     <div class="container">
@@ -689,9 +1046,7 @@
             <div class="column">
                 <div class="content has-text-centered">
                     <p>
-                        Website template borrowed from <a
-                            href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a
-                            href="https://github.com/cliport/cliport.github.io">CLIPort</a>.
+                        Copyright Reserved by The Authors
                     </p>
                 </div>
             </div>
